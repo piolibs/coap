@@ -1,0 +1,51 @@
+{
+    "name": "coap",
+    "version": "1.0.0",
+    "description": "CoAP client: sends GET requests over UDP and parses responses with CBOR payloads.",
+    "keywords": "coap, cbor, udp, iot, esp8266, arduino, client",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/piolibs/coap.git"
+    },
+    "authors": [
+        {
+            "name": "Dmitry Korobkov",
+            "email": "dmitry.korobkov.nn@gmail.com",
+            "url": "https://github.com/dk6v",
+            "maintainer": true
+        }
+    ],
+    "license": "GPL-3.0",
+    "frameworks": "arduino",
+    "platforms": [
+        "arduino",
+        "espressif8266"
+    ],
+    "build": {
+        "libArchive": false,
+        "srcDir": "src",
+        "includeDir": "include",
+        "flags": [
+            "-Iinclude",
+            "-Isrc"
+        ],
+        "srcFilter": [
+            "+<**/*.cpp>"
+        ]
+    },
+    "headers": [
+        "coap.h"
+    ],
+    "export": {
+        "include": [
+            "src/**/*",
+            "include/*",
+            "LICENSE",
+            "README.md"
+        ],
+        "exclude": [
+            "test/*",
+            ".gitignore"
+        ]
+    }
+}
